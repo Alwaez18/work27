@@ -33,3 +33,20 @@ btnPlus.addEventListener("click", () => calculate("+"));
 btnMinus.addEventListener("click", () => calculate("-"));
 btnMNOZH.addEventListener("click", () => calculate("*"));
 btnDELIT.addEventListener("click", () => calculate("/"));
+
+
+const head = 
+document.getElementById("myHead");
+const colorBtn =
+document.getElementById("colorbtn");
+
+const colors = ["red","blue","purple","orange"]
+let current =0;
+function changecolor()
+{
+    head.style.color=colors[current];
+    current=
+    (current + 1) %
+    colors.length;
+}
+colorBtn.addEventListener("click",changecolor);
